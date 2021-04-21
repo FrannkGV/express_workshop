@@ -66,8 +66,6 @@ pokemon.patch("/:id([0-9]{1,3})", async(req, res, next) => {
     
 });
 
-
-
 pokemon.get("/", async (req, res, next) =>{
     const pokemonDB = await db.query("SELECT * FROM pokemon");
     return res.status(200).json({code: 1, message: pokemonDB});
